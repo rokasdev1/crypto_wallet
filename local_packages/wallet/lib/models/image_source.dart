@@ -1,0 +1,4 @@
+enum ImageSource {
+  asset,
+  network,
+}

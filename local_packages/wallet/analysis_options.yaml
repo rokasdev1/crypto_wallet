@@ -1,0 +1,123 @@
+# This file configures the analyzer, which statically analyzes Dart code to
+# check for errors, warnings, and lints.
+#
+# The issues identified by the analyzer are surfaced in the UI of Dart-enabled
+# IDEs (https://dart.dev/tools#ides-and-editors). The analyzer can also be
+# invoked from the command line by running `flutter analyze`.
+
+# The following line activates a set of recommended lints for Flutter apps,
+# packages, and plugins designed to encourage good coding practices.
+include: package:flutter_lints/flutter.yaml
+#  https://dart-lang.github.io/linter/lints/index.html
+analyzer:
+  exclude:
+    - test/mocked_classes.mocks.dart
+    - "**/*.g.dart"
+  enable-experiment:
+    - records
+  errors:
+    #error rules
+    avoid_print: error
+    avoid_empty_else: error
+    avoid_returning_null_for_future: error
+    avoid_slow_async_io: error
+    avoid_type_to_string: error
+    avoid_types_as_parameter_names: error
+    cancel_subscriptions: error
+    close_sinks: error
+    empty_statements: error
+    missing_required_param: error
+    missing_enum_constant_in_switch: error
+    no_duplicate_case_values: error
+    unrelated_type_equality_checks: error
+    depend_on_referenced_packages: error
+    null_check_on_nullable_type_parameter: error
+    library_private_types_in_public_api: error
+    no_leading_underscores_for_library_prefixes: error
+    no_leading_underscores_for_local_identifiers: error
+    unnecessary_constructor_name: error
+    unnecessary_late: error
+    unnecessary_null_aware_assignments: error
+    unnecessary_nullable_for_final_variable_declarations: error
+    invalid_annotation_target: ignore
+    #style rules
+    always_declare_return_types: error
+    always_require_non_null_named_parameters: error
+    annotate_overrides: error
+    avoid_shadowing_type_parameters: error
+    avoid_unnecessary_containers: error
+    curly_braces_in_flow_control_structures: error
+    directives_ordering: error
+    empty_catches: error
+    exhaustive_cases: error
+    library_prefixes: error
+    missing_whitespace_between_adjacent_strings: error
+    no_default_cases: error
+    null_closures: error
+    prefer_adjacent_string_concatenation: error
+    prefer_asserts_with_message: error
+    prefer_collection_literals: error
+    prefer_conditional_assignment: error
+    prefer_contains: error
+    prefer_equal_for_default_values: error
+    prefer_for_elements_to_map_fromIterable: error
+    prefer_if_null_operators: error
+    prefer_initializing_formals: error
+    prefer_interpolation_to_compose_strings: error
+    prefer_is_empty: error
+    prefer_is_not_empty: error
+    prefer_null_aware_operators: error
+    prefer_single_quotes: error
+    prefer_spread_collections: error
+    unnecessary_await_in_return: error
+    unnecessary_null_in_if_null_operators: error
+    constant_identifier_names: ignore
+
+linter:
+  rules:
+    #error rules
+    require_trailing_commas: true
+    avoid_print: false
+    avoid_empty_else: true
+    avoid_returning_null_for_future: true
+    avoid_slow_async_io: true
+    avoid_type_to_string: true
+    avoid_types_as_parameter_names: true
+    cancel_subscriptions: true
+    close_sinks: true
+    empty_statements: true
+    no_duplicate_case_values: true
+    unrelated_type_equality_checks: true
+    #style rules
+    always_declare_return_types: true
+    always_require_non_null_named_parameters: true
+    annotate_overrides: true
+    avoid_shadowing_type_parameters: true
+    avoid_unnecessary_containers: true
+    curly_braces_in_flow_control_structures: true
+    directives_ordering: false
+    empty_catches: true
+    exhaustive_cases: true
+    library_prefixes: true
+    missing_whitespace_between_adjacent_strings: true
+    no_default_cases: true
+    null_closures: true
+    prefer_adjacent_string_concatenation: true
+    prefer_asserts_with_message: true
+    prefer_collection_literals: true
+    prefer_conditional_assignment: true
+    prefer_contains: true
+    prefer_for_elements_to_map_fromIterable: true
+    prefer_if_null_operators: true
+    prefer_initializing_formals: true
+    prefer_interpolation_to_compose_strings: true
+    prefer_is_empty: true
+    prefer_is_not_empty: true
+    prefer_null_aware_operators: true
+    prefer_single_quotes: true
+    prefer_spread_collections: true
+    unnecessary_await_in_return: true
+    unnecessary_null_in_if_null_operators: true
+    unnecessary_this: false
+    use_build_context_synchronously: false
+    use_super_parameters: true
